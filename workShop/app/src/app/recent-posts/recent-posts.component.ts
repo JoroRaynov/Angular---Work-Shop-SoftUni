@@ -17,6 +17,7 @@ export class RecentPostsComponent implements OnInit {
     this.apiService.loadPosts(5).subscribe({
       next: (value) => {
         this.posts = value;
+        this.posts = this.posts.slice(-5);
       },
       error: (err) => {
         // this.errorFetcingData = true;
