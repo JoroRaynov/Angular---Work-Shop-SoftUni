@@ -1,8 +1,10 @@
 <header>
+    
     <div class="mini-navbar-wrap">
         <div class="logo-wrap">
             <p class="logo"><span class="logo">SoftUni Forum</span></p>
         </div>
+        <div *ngIf="!isLogged">
         <div class="mini-navbar">
             <ul>
                 <li>
@@ -13,7 +15,13 @@
                 </li>
             </ul>
         </div>
-    </div>
+        </div>
+        <div *ngIf="isLogged">
+            **Welcome User**
+        </div>
+</div>
+
+    
     <nav>
         <ul>
             <li>
