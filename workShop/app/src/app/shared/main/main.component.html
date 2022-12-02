@@ -2,6 +2,9 @@
 
     <main>
         <div class="theme-title">
+            <ng-container *ngIf="!isLoggedIn">
+                <app-home></app-home>
+            </ng-container>
             <app-theme-list></app-theme-list>
         </div>
     </main>
