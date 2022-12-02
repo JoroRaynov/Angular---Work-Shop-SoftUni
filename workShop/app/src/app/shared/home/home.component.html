@@ -3,7 +3,7 @@
                 <p>SoftUni forum is a place, where you can post your questions, comment, and discuss problems, which
                     you have in your programming language or in your study in SoftUni.</p>
                 <div class="logged">
-                    <ul>
+                    <ul *ngIf="!isLoggedIn">
                         <li>
                             <a routerLink="/auth/login">
                                 <i class="fas fa-sign-in-alt"></i>
@@ -11,7 +11,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a routerLink="/auth/register">
                                 <i class="fas fa-user-plus"></i>
                                 Register
                             </a>
