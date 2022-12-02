@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from '../shared/home/home.component';
 
 
 
@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+
   ],
   imports: [
     CommonModule,
@@ -19,7 +19,8 @@ import { HomeComponent } from './home/home.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+   
   ]
 })
 export class CoreModule { }
