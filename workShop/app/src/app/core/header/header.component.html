@@ -4,20 +4,28 @@
         <div class="logo-wrap">
             <p class="logo"><span class="logo">SoftUni Forum</span></p>
         </div>
-        <div *ngIf="!isLogged">
         <div class="mini-navbar">
-            <ul>
+            <div >
+            <ul *ngIf="!isLoggedIn">
                 <li>
-                    <a href="#">Login</a>
+                    <a routerLink="/auth/login">Login</a>
                 </li>
                 <li>
-                    <a href="#">Register</a>
+                    <a routerLink="/auth/register">Register</a>
+                </li>
+            </ul>
+            <ul *ngIf="isLoggedIn">
+                <li>
+                    <a href="#">{{user?.username}}'s profile</a>
+                </li>
+                <li>
+                    <a href="/auth/logout">Logout</a>
                 </li>
             </ul>
         </div>
-        </div>
-        <div *ngIf="isLogged">
-            **Welcome User**
+        
+            
+        
         </div>
 </div>
 
@@ -25,7 +33,7 @@
     <nav>
         <ul>
             <li>
-                <a href="#">Home</a>
+                <a routerLink="/">Home</a>
             </li>
             <li>
                 <a href="#">Themes</a>
